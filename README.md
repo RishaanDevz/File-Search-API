@@ -121,7 +121,6 @@ Access the user-friendly web interface at https://hg2agr94wa.ac1.ai to:
 **File Transfer & Notifications**
 - Email integration for sending found files
 - Discord bot integration for file delivery
-- Push notifications for long-running searches
 - Batch file operations (zip and send multiple files)
 
 **Enhanced Features**
