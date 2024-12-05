@@ -114,20 +114,15 @@ Access the user-friendly web interface at https://hg2agr94wa.ac1.ai to:
 ## Future Ideas
 
 **System Integration**
-- Run as a LaunchDaemon/Service for persistent availability
-- Automatic startup on system boot
-- System tray integration for easy access
+- [ ] Run as a LaunchDaemon/Service for persistent availability
 
 **File Transfer & Notifications**
-- Email integration for sending found files
-- Discord bot integration for file delivery
-- Batch file operations (zip and send multiple files)
+- [ ] Email integration for sending found files
+- [ ] Discord bot integration for file delivery
 
 **Enhanced Features**
-- Content-based search for text files
-- File preview generation
-- Search filters (date, size, type)
-- Search history and favorites
-- Configurable search locations beyond Downloads folder
+- [ ] Content-based search for text files
+- [ ] Search filters (date, size, type)
+- [ ] Configurable search locations beyond Downloads folder (eventually be able to search the full system)
 
 Feel free to contribute to any of these features or suggest new ones!
