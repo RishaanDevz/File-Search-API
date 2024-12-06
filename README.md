@@ -3,7 +3,7 @@
 A Flask-based REST API that enables searching files in your Downloads directory through HTTP endpoints or a web interface. Access your files locally or through a public URL using Loophole tunneling.
 
 ## Live Demo
-Try out the web interface at: https://hg2agr94wa.ac1.ai. (you have to start the server and tunnel with loophole, steps are below)
+Try out the web interface at: https://qx2yrxe9wc.ac1.ai/. (you have to start the server and tunnel with loophole, steps are below)
 
 ## Features
 
@@ -93,7 +93,7 @@ Example response:
 
 ## Web Interface
 
-Access the user-friendly web interface at https://hg2agr94wa.ac1.ai to:
+Access the user-friendly web interface at https://qx2yrxe9wc.ac1.ai/ to:
 - Search files without using API endpoints directly
 - View file listings with size information
 - Filter by file extensions
