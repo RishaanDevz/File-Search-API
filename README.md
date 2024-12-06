@@ -117,7 +117,7 @@ Access the user-friendly web interface at https://qx2yrxe9wc.ac1.ai/ to:
 - [ ] Run as a LaunchDaemon/Service for persistent availability
 
 **File Transfer & Notifications**
-- [ ] Email integration for sending found files
+- [x] Email integration for sending found files
 - [ ] Discord bot integration for file delivery
 
 **Enhanced Features**
