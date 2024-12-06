@@ -18,6 +18,8 @@ Try out the web interface at: https://qx2yrxe9wc.ac1.ai/. (you have to start the
 - Python 3.7+
 - Loophole CLI
 - Flask
+- macOS
+- Open Interpreter
 
 ## Installation
 
@@ -29,7 +31,7 @@ cd File-Search-API
 
 2. Install dependencies:
 ```bash
-pip install flask
+pip install flask interpreter
 ```
 To install Loophole, download the CLI from https://loophole.cloud/download
 
