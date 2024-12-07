@@ -8,19 +8,29 @@ import interpreter
 app = Flask(__name__)
 
 def start_loophole():
-    subprocess.run(["loophole", "http", "8000", "--hostname", "insert-subdomain-here"])
+    process = subprocess.Popen(
+        ["loophole", "http", "8000", "--hostname", "insert-subdomain-here"],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
+    return process
 
 def search_files(search_term, directory="."):
     results = []
-    for root, _, files in os.walk(directory):
-        for file in files:
-            if search_term.lower() in file.lower():
-                file_path = os.path.join(root, file)
-                results.append({
-                    "filename": file,
-                    "path": file_path,
-                    "size": os.path.getsize(file_path)
-                })
+    for entry in os.scandir(directory):
+        try:
+            if entry.is_file(follow_symlinks=False):
+                if search_term.lower() in entry.name.lower():
+                    results.append({
+                        "filename": entry.name,
+                        "path": str(entry.path),
+                        "size": entry.stat().st_size,
+                        "modified": entry.stat().st_mtime
+                    })
+            elif entry.is_dir(follow_symlinks=False):
+                results.extend(search_files(search_term, entry.path))
+        except PermissionError:
+            continue
     return results
 
 @app.route('/search/<term>')
@@ -86,9 +96,8 @@ def send_email():
         }), 500
 
 if __name__ == '__main__':
-    # Start Loophole in a separate thread
-    loophole_thread = threading.Thread(target=start_loophole, daemon=True)
-    loophole_thread.start()
-    
-    # Run Flask app
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    loophole_process = start_loophole()
+    try:
+        app.run(host='0.0.0.0', port=8000, debug=False)
+    finally:
+        loophole_process.terminate()
