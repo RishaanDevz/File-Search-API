@@ -33,9 +33,8 @@ cd File-Search-API
 ```bash
 pip install flask interpreter
 ```
-To install Loophole, download the CLI from https://loophole.cloud/download
 
-3. Install Loophole CLI following instructions from their website
+3. Install Loophole CLI following instructions from their website (https://loophole.cloud/download)
 
 ## Configuration
 
@@ -105,13 +104,8 @@ Access the user-friendly web interface at https://qx2yrxe9wc.ac1.ai/ to:
 
 - The API exposes file information from your Downloads directory
 - Use with caution when exposing through Loophole
-- Consider implementing authentication for production use
+- Try to make your subdomain something that only YOU would know, and **never, EVER, share your loophole URL.**
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
 
 ## Future Ideas
 
