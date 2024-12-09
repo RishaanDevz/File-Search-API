@@ -31,10 +31,12 @@ cd File-Search-API
 
 2. Install dependencies:
 ```bash
-pip install flask interpreter
+pip install flask open-interpreter
 ```
 
 3. Install Loophole CLI following instructions from their website (https://loophole.cloud/download)
+
+    - Run `loophole account login` then run the sign in process with the URL and code that loophole provides. Refer to debug-loophole.md if any errors come up.
 
 ## Configuration
 
